@@ -8,8 +8,8 @@
 
 void quick_sort(int *array, size_t size)
 {
-    if (array)
-        quicksort(array, size, 0, size - 1);
+if (array)
+quicksort(array, size, 0, size - 1);
 }
 
 /**
@@ -24,19 +24,19 @@ void quick_sort(int *array, size_t size)
 
 int partition(int *array, size_t size, int lo, int hi)
 {
-    int pivot, i, j;
+int pivot, i, j;
 
-    pivot = array[hi];
-    i = lo - 1;
-    for (j = lo; j < hi; ++j)
-        if (array[j] < pivot)
-        {
-            ++i;
-            swap_and_print(array, size, i, j);
-        }
-    ++i;
-    swap_and_print(array, size, i, hi);
-    return (i);
+pivot = array[hi];
+i = lo - 1;
+for (j = lo; j < hi; ++j)
+if (array[j] < pivot)
+{
+++i;
+swap_and_print(array, size, i, j);
+}
+++i;
+swap_and_print(array, size, i, hi);
+return (i);
 }
 
 /**
@@ -49,14 +49,14 @@ int partition(int *array, size_t size, int lo, int hi)
 
 void quicksort(int *array, size_t size, int lo, int hi)
 {
-    int pivot_index;
+int pivot_index;
 
-    if (lo < hi)
-    {
-        pivot_index = partition(array, size, lo, hi);
-        quicksort(array, size, lo, pivot_index - 1);
-        quicksort(array, size, pivot_index + 1, hi);
-    }
+if (lo < hi)
+{
+pivot_index = partition(array, size, lo, hi);
+quicksort(array, size, lo, pivot_index - 1);
+quicksort(array, size, pivot_index + 1, hi);
+}
 }
 
 /**
@@ -69,13 +69,13 @@ void quicksort(int *array, size_t size, int lo, int hi)
 
 void swap_and_print(int *array, size_t size, int i, int j)
 {
-    int temp;
+int temp;
 
-    temp = array[j];
-    if (array[i] != array[j])
-    {
-        array[j] = array[i];
-        array[i] = temp;
-        print_array(array, size);
-    }
+temp = array[j];
+if (array[i] != array[j])
+{
+array[j] = array[i];
+array[i] = temp;
+print_array(array, size);
+}
 }
