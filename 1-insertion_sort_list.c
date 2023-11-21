@@ -8,23 +8,19 @@
 
 void insertion_sort_list(listint_t **list)
 {
-listint_t *node;
+listint_t *now, *temp;
 
-if (list == NULL || (*list)->next == NULL)
-return;
-
-node = (*list)->next;
-while (node)
+if (list && *list && (*list)->next)
 {
-while (node->prev && node->prev->n > node->n)
+for (now = (*list)->next; now; now = now->next)
 {
-node = swap_node(node, list);
-print_list(*list);
+temp = now;
+while (temp->prev && now->n < temp->prev->n)
+swapp_list(*list, temp->prev, temp);
+}
+}
 }
 
-node = node->next;
-}
-}
 
 /**
  * swap_node - Swap a node with its previous one in a doubly linked list.
