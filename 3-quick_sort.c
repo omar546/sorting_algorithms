@@ -1,18 +1,6 @@
 #include "sort.h"
 
 /**
- * quick_sort - Quick sort algorithm
- * @array: Array to swap elements
- * @size: Size of array
- */
-
-void quick_sort(int *array, size_t size)
-{
-if (array)
-quicksort(array, size, 0, size - 1);
-}
-
-/**
  * partition - Partitions array based on pivot
  * @array: Array to sort
  * @size: Size of array
@@ -57,6 +45,18 @@ pivot_index = partition(array, size, lo, hi);
 quicksort(array, size, lo, pivot_index - 1);
 quicksort(array, size, pivot_index + 1, hi);
 }
+}
+
+/**
+ * quick_sort - Quick sort algorithm
+ * @array: Array to swap elements
+ * @size: Size of array
+ */
+
+void quick_sort(int *array, size_t size)
+{
+if (array)
+quicksort(array, size, 0, size - 1);
 }
 
 /**
