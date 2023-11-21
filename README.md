@@ -42,13 +42,6 @@ The project is structured as follows:
 |-- 1-insertion_sort_list.c
 |-- 2-selection_sort.c
 |-- 3-quick_sort.c
-|-- 4-merge_sort.c
-|-- main/
-|   |-- 0-main.c
-|   |-- 1-main.c
-|   |-- 2-main.c
-|   |-- 3-main.c
-|   |-- 4-main.c
 |-- README.md
 ```
 
