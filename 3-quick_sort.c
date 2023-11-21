@@ -10,7 +10,7 @@
  * Return: Position of partition
  */
 
-int partition(int *array, size_t size, int lo, int hi)
+int cut(int *array, size_t size, int lo, int hi)
 {
 int pivot, i, j;
 
@@ -41,7 +41,7 @@ int pivot_index;
 
 if (lo < hi)
 {
-pivot_index = partition(array, size, lo, hi);
+pivot_index = cut(array, size, lo, hi);
 quicksort(array, size, lo, pivot_index - 1);
 quicksort(array, size, pivot_index + 1, hi);
 }
